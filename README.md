@@ -2,6 +2,13 @@
 
 This is me exploring neural network using plain python and some libraries like numpy etc.
 
+## Contents
+
+- [single neuron with plain python](/plain_python_neuron/single_neuron_network.py)
+- [multi neuron with plain python](/plain_python_neuron/multi_neuron_network.py)
+- [single neuron with plain python](/numpy_neuron/single_neuron_network.py)
+- [multi neuron with plain python](/numpy_neuron/multi_neuron_network.py)
+
 ## Setup
 
 **python version:** 3.8.5
