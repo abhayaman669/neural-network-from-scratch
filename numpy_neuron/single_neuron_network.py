@@ -21,5 +21,5 @@ sum of all inp[i] * weight[i] + bias
 here i is from 0 to the length of inp. here it's 3
 """
 
-output = np.dot(inp, weight) + bias
+output = np.dot(weight, inp) + bias
 print("="*20, "\nCalculated output is: ", output)
