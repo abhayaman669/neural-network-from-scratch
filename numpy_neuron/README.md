@@ -32,7 +32,7 @@ let's say we have two list
 >>> b = [4, 5, 6]
 ```
 
-here the dot product will be: `a[i] * b[i]` where i is in `range(len(a))`.
+here the dot product will be: sum of `a[i] * b[i]` where i is in `range(len(a))`.
 
 here is the numpy function for that
 
