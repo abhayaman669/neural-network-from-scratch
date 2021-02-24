@@ -1,10 +1,13 @@
 import random
 
+import nnfs
 import numpy as np
+from nnfs.datasets import spiral_data
 
 
-np.random.seed(0)
-INP = [[random.randint(0, 5) for i in range(4)] for j in range(3)]
+nnfs.init()
+
+X, y = spiral_data(100, 3)
 
 class LayerDense:
     """
@@ -17,9 +20,16 @@ class LayerDense:
     def forward(self, inputs):
         self.output = np.dot(inputs, self.weights) + self.biases
 
-layer1 = LayerDense(4, 5)
-layer2 = LayerDense(5, 2)
+class ActivationReLU:
+    """
+    """
 
-layer1.forward(INP)
-layer2.forward(layer1.output)
-print(layer2.output)
+    def forward(self, inputs):
+        self.output = np.maximum(0, inputs)
+
+layer1 = LayerDense(2, 5)
+activation1 = ActivationReLU()
+
+layer1.forward(X)
+activation1.forward(layer1.output)
+print(activation1.output)
